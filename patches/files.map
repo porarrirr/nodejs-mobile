@@ -68,7 +68,6 @@ test-skip-adapt-parallel-and-sequential-tests-for-mo.patch	test/sequential/seque
 test-skip-adapt-parallel-and-sequential-tests-for-mo.patch	test/sequential/test-async-wrap-getasyncid.js
 test-skip-adapt-parallel-and-sequential-tests-for-mo.patch	test/sequential/test-fs-watch.js
 doc-build-mobile-notes-and-ignores.patch	.gitignore
-doc-build-mobile-notes-and-ignores.patch	README.md
 ci-remove-upstream-only-workflows-and-config.patch	.github/ISSUE_TEMPLATE/config.yml
 ci-remove-upstream-only-workflows-and-config.patch	.github/SUPPORT.md
 ci-remove-upstream-only-workflows-and-config.patch	.github/label-pr-config.yml
@@ -77,7 +76,6 @@ ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/build-tarba
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/close-stalled.yml
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/codeql.yml
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/comment-labeled.yml
-ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/commit-lint-problem-matcher.json
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/commit-lint.yml
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/commit-queue.yml
 ci-remove-upstream-only-workflows-and-config.patch	.github/workflows/coverage-linux-without-intl.yml
