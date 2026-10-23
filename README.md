@@ -1,4 +1,4 @@
-# Node.js for Mobile Apps
+# Node.js for Mobile Apps — YamabikoChat iOS fork
 
 Full Node.js, built as an embeddable native library for **Android** and
 **iOS** — the runtime your app links against to run a real Node.js process
@@ -9,7 +9,10 @@ in-app, with npm modules and N-API native addons.
 | Android | `libnode.so` + headers | `arm64-v8a`, `armeabi-v7a`, `x86_64` (16 KB page size) |
 | iOS | `NodeMobile.xcframework` | `arm64` device, `arm64` simulator |
 
-Current line: **Node.js 24** (`v24.18.0`). `process.version` reports the
+This fork distributes Node.js **24.22.1** for YamabikoChat iOS. See
+[the fork release process](docs/YAMABIKO_RELEASE.md).
+
+Current line: **Node.js 24** (`v24.22.1`). `process.version` reports the
 upstream version unchanged, so version-parsing tools keep working; the
 mobile build is identified by `process.versions.mobile` (e.g. `"24.18.0-0"`).
 

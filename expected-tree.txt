@@ -1,17 +1,1 @@
-# The git tree hash that scripts/prepare.sh must produce — the checksum of
-# the PRODUCT, committed next to the RECIPE (upstream-base.txt + patches/ +
-# mobile-src/).
-#
-# prepare.sh = clone nodejs/node at the pinned base, apply the patch series,
-# overlay mobile-src/, commit. The resulting git tree must hash to exactly
-# the value below; prepare.sh fails otherwise. This is checked on every push
-# (verify-patches.yml, against a fresh upstream clone) and again inside
-# every CI job (the materialize action), so nothing is ever built from a
-# tree that differs from what was committed and reviewed. A release tag
-# points at a materialized commit with exactly this tree.
-#
-# Maintenance: any intentional change to the recipe changes the product —
-# run prepare.sh (or regenerate-patches.py, which prints the hash) and
-# update the value below in the same commit. If you forget, CI fails and
-# prints the hash it got.
-51d99404a1d3920f5a7750bb81a9f4b42119b50a
+12f4f97ca4bc9c1027dfbe3533d90148d035468e

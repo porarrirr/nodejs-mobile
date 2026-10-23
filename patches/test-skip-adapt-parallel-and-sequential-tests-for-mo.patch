@@ -54,10 +54,10 @@ Co-authored-by: Andre Staltz <andre@staltz.com>
  35 files changed, 1708 insertions(+), 46 deletions(-)
 
 diff --git a/test/parallel/parallel.status b/test/parallel/parallel.status
-index cf7f8d42e8..d1f28be02e 100644
+index d13efc8ac1..67418857d6 100644
 --- a/test/parallel/parallel.status
 +++ b/test/parallel/parallel.status
-@@ -158,6 +158,1404 @@ test-tls-set-default-ca-certificates-append-fetch: SKIP
+@@ -160,6 +160,1404 @@ test-tls-set-default-ca-certificates-append-fetch: SKIP
  test-tls-set-default-ca-certificates-reset-fetch: SKIP
  test-inspector-invalid-protocol: SKIP
  
@@ -1476,7 +1476,7 @@ index daf7f8064b..76c2ce82dd 100644
          assert.strictEqual(recvBufferSize, expectedBufferSize);
          assert.strictEqual(sendBufferSize, expectedBufferSize);
 diff --git a/test/parallel/test-dgram-membership.js b/test/parallel/test-dgram-membership.js
-index ebfdaa9cb6..8414b251c8 100644
+index 052deb92d6..19e9b0e81e 100644
 --- a/test/parallel/test-dgram-membership.js
 +++ b/test/parallel/test-dgram-membership.js
 @@ -108,7 +108,10 @@ const setup = dgram.createSocket.bind(dgram, { type: 'udp4', reuseAddr: true });
@@ -1967,7 +1967,7 @@ index a2df7d580d..eeb6c1de91 100644
 +
 +assert.deepStrictEqual(process.getActiveResourcesInfo(), expected);
 diff --git a/test/parallel/test-process-versions.js b/test/parallel/test-process-versions.js
-index b670ff37ac..68724daf7f 100644
+index 7f54beeea6..14f222d299 100644
 --- a/test/parallel/test-process-versions.js
 +++ b/test/parallel/test-process-versions.js
 @@ -2,8 +2,15 @@
@@ -2108,7 +2108,7 @@ index e1595350cd..f5d84f7480 100644
 +  */
  });
 diff --git a/test/sequential/sequential.status b/test/sequential/sequential.status
-index 627e61911d..7a4e74ce4a 100644
+index 6b5714500b..9c8a8e0f5c 100644
 --- a/test/sequential/sequential.status
 +++ b/test/sequential/sequential.status
 @@ -43,6 +43,135 @@ test-perf-hooks: SKIP
@@ -2248,7 +2248,7 @@ index 627e61911d..7a4e74ce4a 100644
  # https://github.com/nodejs/node/issues/49933
  test-watch-mode-inspect: SKIP
 diff --git a/test/sequential/test-async-wrap-getasyncid.js b/test/sequential/test-async-wrap-getasyncid.js
-index 5db4a77631..dba092fd3f 100644
+index ef48f457a8..529cc62b12 100644
 --- a/test/sequential/test-async-wrap-getasyncid.js
 +++ b/test/sequential/test-async-wrap-getasyncid.js
 @@ -12,6 +12,8 @@ const providers = { ...internalBinding('async_wrap').Providers };
@@ -2273,7 +2273,7 @@ index 5db4a77631..dba092fd3f 100644
      const objKeys = Object.keys(providers);
      if (objKeys.length > 0)
        process._rawDebug(objKeys);
-@@ -196,7 +204,8 @@ if (common.hasCrypto) { // eslint-disable-line node-core/crypto-check
+@@ -198,7 +206,8 @@ if (common.hasCrypto) { // eslint-disable-line node-core/crypto-check
    testInitialized(handle, 'Pipe');
  }
  
@@ -2283,7 +2283,7 @@ index 5db4a77631..dba092fd3f 100644
    tmpdir.refresh();
  
    const server = net.createServer(common.mustCall((socket) => {
-@@ -328,6 +337,8 @@ if (common.hasCrypto) { // eslint-disable-line node-core/crypto-check
+@@ -330,6 +339,8 @@ if (common.hasCrypto) { // eslint-disable-line node-core/crypto-check
  // DIRHANDLE
  {
    const dirBinding = internalBinding('fs_dir');
