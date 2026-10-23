@@ -8,7 +8,8 @@ upstream CI file removals were refreshed. Runtime patches applied cleanly.
 
 Review and merge the upgrade PR, then dispatch **Yamabiko iOS release** on
 `recipe`. The workflow cold-builds both arm64 slices, combines the framework,
-runs the existing curated iOS Simulator JS suite and native-addon test, then
+runs the existing curated iOS Simulator JS suite, the upstream Brotli/TLS
+security regression tests, and native-addon test, then
 publishes an iOS-only prerelease with SHA256SUMS, the composite LICENSE and
 source provenance. Tags point to the recipe commit. No shared compiler or
 binary cache is used for release builds. Do not upload or replace release
