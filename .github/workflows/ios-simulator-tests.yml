@@ -116,6 +116,16 @@ jobs:
             | xargs ./tools/test.py -j 1 --flaky-tests=skip --timeout=300 \
                 --arch ios --shell="./tools/mobile-test/ios/node-ios-sim-proxy.sh"
 
+      - name: Run October 2026 security regressions on simulator
+        env:
+          DEVICE_ID: ${{ steps.boot-sim.outputs.udid }}
+        run: |
+          ./tools/test.py -j 1 --timeout=300 --arch ios \
+            --shell="./tools/mobile-test/ios/node-ios-sim-proxy.sh" \
+            parallel/test-zlib-invalid-input \
+            parallel/test-tls-check-server-identity \
+            parallel/test-tls-connect-non-canonical-ip
+
       # Native-addon gate: build the crc-native N-API addon against THIS build's
       # framework (-framework NodeMobile -> two-level napi_* binding) and load it
       # in the testnode app. Proves a real addon dlopens + runs (the "B-1"
